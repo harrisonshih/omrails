@@ -1,23 +1,17 @@
-<div class = "row">
-
-	<div class = "span6 offset3">
-		<div class = "well">
-
-			<p>
-		  		<b>Description:</b>
-		  		<%= @pin.description %>
-			</p>
-			<p>
-		  		<b>Creator:</b>
-		  		<%= @pin.user.name %>
-			</p>
-			<% if current_user == @pin_user %>
-
-			<%= link_to 'Edit', edit_pin_path(@pin) %> |
-			<% end %>
-			<%= link_to 'Back', pins_path %>
-
-	</div>
-	</div>
+<div class="row">
+    <div class="span6 offset3">
+        <div class="well">
+            <%= image_tag @pin.image %>
+            <p>
+              <%= @pin.description %>
+            </p>
+            <p>
+              <%= @pin.user.name %>
+            </p>
+            <% if current_user == @pin.user %>
+                <%= link_to 'Edit', edit_pin_path(@pin) %> |
+            <% end %>
+            <%= link_to 'Back', pins_path %>
+        </div>
+    </div>
 </div>
-
