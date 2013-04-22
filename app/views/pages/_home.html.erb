@@ -1,25 +1,29 @@
 <% if user_signed_in? %>
 
 <h1> Logged in! </h1>
+You are strong and beautiful, keep doing what you do!
 
-
-// #% unless user_signed_in? %> 
-
+<!-- % unless user_signed_in? %>  -->
 
 <% else %>
 
 <div class="hero-unit">
-	<h1>Welcome to the Pins App!</h1>
+	<h1>Photos on Photos on Photos</h1>
 
 	<p>
-		This is probably my home page if you are seeing it
-		<%= link_to "Google", "http://google.com" %>
-
-	</p>
-
+		Oh My God, Have you heard of this amazing app??? It's simply amazing!!! 
 	<p>
-		This is a new page!
+		Sign up right now... RIGHT NOW!
 	</p>
+
+		<img src = "http://bbsimg.ngfiles.com/1/18781000/ngbbs49c18a156cd21.jpg" height="400" width="400" />
+
+	</p>
+	<p>
+		Billy mayes approved!
+	</p>
+
+
 	<p>
 		<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
 	</p>
