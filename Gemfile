@@ -5,6 +5,8 @@ gem 'rails', '3.2.12'
 gem 'jquery-rails'
 gem 'devise'
 gem "paperclip", "~> 3.0"
+gem 'aws-sdk'
+
 
 group :production do
 	gem 'pg'
