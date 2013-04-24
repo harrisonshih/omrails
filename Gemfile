@@ -10,6 +10,7 @@ gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem "memer", "~> 0.1.0"
+gem 'rmagick', '2.13.2'
 
 
 group :production do

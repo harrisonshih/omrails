@@ -1,3 +1,36 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#containerdiv {
+   position: relative;
+}
+
+#topdiv {
+   position: absolute;
+   top: 80px;
+   left: 150px; 
+   color: white;
+   font-size: 30px;
+   text-shadow:
+   -2px -2px 0 #000,
+   2px -2px 0 #000,
+   -2px 2px 0 #000,
+   2px 2px 0 #000;  
+   max-width: 600px;
+   line-height: 35px;
+
+}
+
+#bottomdiv {
+   position: absolute;
+   top: 450px;
+   left: 150px; 
+   color: white;
+   font-size: 300%;
+   text-shadow:
+   -2px -2px 0 #000,
+   2px -2px 0 #000,
+   -2px 2px 0 #000,
+   2px 2px 0 #000;  
+}
