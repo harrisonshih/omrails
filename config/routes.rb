@@ -6,6 +6,8 @@ Omrails::Application.routes.draw do
 
   get 'about' => 'Pages#about'
 
+  get 'overlay' => 'pages#edit_image'
+
   root :to => 'pins#index'
 
   # The priority is based upon order of creation:

@@ -7,6 +7,9 @@
   <%= f.input :image_remote_url, label: "Or enter image URL" %>
   <%= f.input :description, as: :text, input_html: { rows: "3" } %>
 
+  <%= link_to "Edit Image", overlay_path %>
+
+
   <div class="form-actions">
     <%= f.button :submit, class: "btn btn-primary" %>
   </div>
