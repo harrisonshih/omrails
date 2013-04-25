@@ -1,6 +1,16 @@
 <div class = "box">
-	<%= link_to (image_tag pin.image(:medium)), pin %>
+
+<div id = "container">
+	<%= link_to (image_tag pin.image), pin %>
+	<div id = "top_thumbnail">
+		<%= pin.top_text %>
+	</div>
+	<div id = "bottom_thumbnail">
+		<%= pin.bottom_text %>
+	</div>
+</div>
 	<p>
+
 		<%= pin.description %>
 	</p>
 	<p>
