@@ -14,7 +14,6 @@ jQuery ->
     $("#pin_image_remote_url").val($(e.target)[0].src)
   $("#image_name1").on "click", populate_box
 
-
 jQuery ->
   populate_box = (e) ->
     $("#pin_image_remote_url").val($(e.target)[0].src)
@@ -39,4 +38,6 @@ jQuery ->
   populate_box = (e) ->
     $("#pin_image_remote_url").val($(e.target)[0].src)
   $("#image_name6").on "click", populate_box
+
+
 

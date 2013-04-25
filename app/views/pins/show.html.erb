@@ -18,6 +18,7 @@
 
                 <div id = "top_show">
                 <%= @pin.top_text %>
+
                 </div>
                 <div id = "bottom_show">
                 <%= @pin.bottom_text %>
@@ -31,8 +32,21 @@
               <%= @pin.user.name %>
             </p>
             <% if current_user == @pin.user %>
-                <%= link_to 'Edit', edit_pin_path(@pin) %> |
+                <%= link_to 'Edit', edit_pin_path(@pin) %> 
             <% end %>
+
+            <div>
+
+            <% unless Pin.where("id > ?", @pin.id).order("id ASC").first.nil? %>
+              <%= link_to "Newer", pins_path+"/"+Pin.where("id > ?", @pin.id).order("id ASC").first.id.to_s %>
+
+            <% end %>
+
+            <% unless Pin.where("id < ?", @pin.id).order("id ASC").last.nil? %>
+              <%= link_to "Older", pins_path+"/"+Pin.where("id < ?", @pin.id).order("id ASC").last.id.to_s %>
+
+            <% end %>
+            </div>
             <%= link_to 'Back', pins_path %>
         </div>
     </div>

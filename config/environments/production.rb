@@ -62,7 +62,7 @@ Omrails::Application.configure do
   config.active_support.deprecation = :notify
 
 
-  #
+  #change this so that I can call domain_name as a variable elsewhere
   config.domain_name = "http://ancient-wave-1840.herokuapp.com/"
 
   # Log the query plan for queries taking more than this (works

@@ -9,57 +9,48 @@
 #top_thumbnail {
    position: absolute;
    top: 5px;
-   left: 5px; 
    color: white;
-   font-size: 15px;
-   text-shadow:
-   1px -1px 0 #000,
-   -1px 1px 0 #000,
-   1px 1px 0 #000;  
+   font-size: 17px;
+   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
    max-width: 600px;
-   line-height: 17px;
+   line-height: 18px;
+   width: 100%;
+   text-align: center;
 
 }
 
 #bottom_thumbnail {
    position: absolute;
    bottom: 5px;
-   left: 5px; 
    color: white;
-   font-size: 15px;
-   text-shadow:
-   -2px -2px 0 #000,
-   2px -2px 0 #000,
-   -2px 2px 0 #000,
-   2px 2px 0 #000;  
+   font-size: 17px;
+   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
    max-width: 600px;
-   line-height: 17px;
+   line-height: 18px;
+   width: 100%;
+   text-align: center;
+
 }
 
 #top_show {
    position: absolute;
    top: 10px;
-   left: 10px; 
    color: white;
    font-size: 45px;
-   text-shadow:
-   1px -1px 0 #000,
-   -1px 1px 0 #000,
-   1px 1px 0 #000;  
+   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
    line-height: 47px;
-
+   margin: 0 auto;
+   width: 100%;
+   text-align: center;
 }
 
 #bottom_show {
    position: absolute;
    bottom: 10px;
-   left: 10px; 
    color: white;
    font-size: 45px;
-   text-shadow:
-   -2px -2px 0 #000,
-   2px -2px 0 #000,
-   -2px 2px 0 #000,
-   2px 2px 0 #000;  
+   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
    line-height: 47px;
+   width: 100%;
+   text-align: center;
 }

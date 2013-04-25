@@ -1,4 +1,4 @@
-
+  
 <div>
 <%= simple_form_for(@pin, html: { class: "form-horizontal"}) do |f| %>
   <%= f.error_notification %>
@@ -38,9 +38,14 @@
   
   <%= image_tag "http://i.imgflip.com/1bh8.jpg", id: 'image_name6', style: "height:200px;"  %>
 
-</div>
 
-
+  <% if defined?(pin_image_remote_url) %>
+  <%= image_tag "\""+pin_image_remote_url+"\"" %>
+  <%end%>
 
 
 <% end %>
+
+</div>
+
+
