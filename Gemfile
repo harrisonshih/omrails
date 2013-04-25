@@ -12,6 +12,7 @@ gem 'bootstrap-will_paginate', '0.0.6'
 gem "memer", "~> 0.1.0"
 
 
+
 group :production do
 	gem 'pg'
 end
