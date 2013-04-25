@@ -10,6 +10,7 @@ gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem "memer", "~> 0.1.0"
+gem 'acts_as_votable', '~> 0.5.0'
 
 
 

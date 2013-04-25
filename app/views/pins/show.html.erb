@@ -31,6 +31,15 @@
             <p>
               <%= @pin.user.name %>
             </p>
+
+            <ul>
+                <li>Liked by <%= @pin.likes.size %></li>
+                <li>Hated by <%= @pin.dislikes.size %></li>
+                <li><%= link_to "Like", like_pin_path(@pin) %></li>
+                <li><%= link_to "Hate", dislike_pin_path(@pin) %></li>
+            </ul>
+
+
             <% if current_user == @pin.user %>
                 <%= link_to 'Edit', edit_pin_path(@pin) %> 
             <% end %>
@@ -51,6 +60,9 @@
         </div>
     </div>
 </div>
+
+
+
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

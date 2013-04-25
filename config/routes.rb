@@ -1,5 +1,10 @@
 Omrails::Application.routes.draw do
-  resources :pins
+  resources :pins do
+    member do
+      get "like" => "pins#like"
+      get "dislike" => "pins#dislike"
+    end
+  end
 
 
   devise_for :users

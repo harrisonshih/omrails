@@ -47,7 +47,7 @@ class PinsController < ApplicationController
 
     respond_to do |format|
       if @pin.save
-        format.html { redirect_to @pin, notice: 'Pin was successfully created.' }
+        format.html { redirect_to @pin, notice: 'Meme was successfully created.' }
         format.json { render json: @pin, status: :created, location: @pin }
       else
         format.html { render action: "new" }
@@ -83,6 +83,26 @@ class PinsController < ApplicationController
       format.json { head :no_content }
     end
   end
-end
 
+  def like
+    @pin = Pin.find(params[:id])
+    @pin.liked_by current_user
+
+    respond_to do |format|
+      format.html { head :no_content }
+      format.json { head :no_content }
+    end
+  end
+
+  def dislike
+    @pin = Pin.find(params[:id])
+    @pin.dislike_by current_user
+
+    respond_to do |format|
+      format.html { head :no_content }
+      format.json { head :no_content }
+    end
+  end
+
+end
 
