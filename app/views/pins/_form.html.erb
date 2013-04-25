@@ -1,3 +1,5 @@
+
+<div>
 <%= simple_form_for(@pin, html: { class: "form-horizontal"}) do |f| %>
   <%= f.error_notification %>
   <%= f.full_error :image_file_size, class: "alert alert-error" %>
@@ -11,8 +13,23 @@
 
   <%= link_to "Edit Image", overlay_path %>
 
-
-  <div class="form-actions">
+    <div class="form-actions">
+    <%= link_to 'Back', pins_path %>        
     <%= f.button :submit, class: "btn btn-primary" %>
+
+
   </div>
+
+  <%= image_tag "http://s3.amazonaws.com/pins_app/pins/images/000/000/016/original/2013-04-23_17.03.51.jpg?1366851316", id: 'image_name', style: "width:100px; height:100px"  %>
+
+  <%= image_tag "http://s3.amazonaws.com/pins_app/pins/images/000/000/012/original/2013-04-14_12.21.45.jpg?1366673526", id: 'image_name', style: "width:100px; height:100px"  %>
+
+  <%= image_tag "http://power.itp.ac.cn/~jmyang/funny/fun4.jpg", id: 'image_name', style: "width:100px; height:100px"  %>
+  
+
+</div>
+
+
+
+
 <% end %>
