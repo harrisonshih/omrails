@@ -41,3 +41,39 @@ jQuery ->
 
 
 
+
+###
+function highlight_image(image_name) {
+  var children = document.getElementById('templates').childNodes;
+  for (i = 0; i < children.length + 1; i++) {
+     var image = children[i];
+
+
+
+
+      $("img").click(function() {
+    $(this).css('border', "solid 2px red");  
+  });
+});
+  }
+
+
+
+<span>
+    <input type="checkbox" tabindex="12" value="1" name="salgsvilkar" id="Checkbox2"/>
+    <label for="Checkbox2">Salgs- og leveringsvilkår er lest og akseptert</label>
+</span>
+
+<script type="text/javascript">
+    document.getElementById('Checkbox2').onclick= function() {
+        var s= this.parentNode.style;
+        s.backgroundColor='#E5F7C7';
+        s.border='solid blue 1px;';
+    };
+</script>
+
+} 
+
+###
+
+

@@ -5,6 +5,46 @@
 	  <%= stylesheet_link_tag    "application", :media => "all" %>
 	  <%= javascript_include_tag "application" %>
 	  <%= csrf_meta_tags %>
+
+<!-- Highlight boxes etc are from this stack overflow http://stackoverflow.com/questions/3374393/on-click-img-border-color-multiple-images-only-need-1-highlighted-at-a-ti -->
+
+<style type="text/css">
+ .normal {
+    border:none;
+ }
+ .highlighted {
+   border:3px solid red;
+ }
+</style>
+
+
+<script type="text/javascript">
+
+
+ var ImageSelector = function() {
+    var imgs = null;
+    var selImg = null;
+
+    return {
+       addImages: function(container) {
+          imgs = container.getElementsByTagName("img");
+          for(var i = 0, len = imgs.length; i < len; i++) {
+             var img = imgs[i];
+             img.className = "normal";
+             img.onclick = function()  {
+                if(selImg)   {
+                   selImg.className = "normal";
+                }
+                this.className = "highlighted";
+                selImg = this;
+             };
+          }
+       }
+    };
+ }();
+
+</script>  
+
 	</head>
 	
 	<body>

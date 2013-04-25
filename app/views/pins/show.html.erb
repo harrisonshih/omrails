@@ -32,12 +32,12 @@
               <%= @pin.user.name %>
             </p>
 
-            <ul>
+            <div>
                 <li>Liked by <%= @pin.likes.size %></li>
                 <li>Hated by <%= @pin.dislikes.size %></li>
                 <li><%= link_to "Like", like_pin_path(@pin) %></li>
                 <li><%= link_to "Hate", dislike_pin_path(@pin) %></li>
-            </ul>
+            </div>
 
 
             <% if current_user == @pin.user %>

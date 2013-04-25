@@ -1,4 +1,7 @@
-  
+
+
+
+
 <div>
 <%= simple_form_for(@pin, html: { class: "form-horizontal"}) do |f| %>
   <%= f.error_notification %>
@@ -26,6 +29,9 @@
 </p>
 
 
+
+
+  <div id = "templates">
   <%= image_tag "http://i.imgur.com/exAEWZq.png", id: 'image_name1', style: "height:200px;"   %>
 
   <%= image_tag "http://imgur.com/hbYgbsW.png", id: 'image_name2', style: "height:200px;"  %>
@@ -38,9 +44,18 @@
   
   <%= image_tag "http://i.imgflip.com/1bh8.jpg", id: 'image_name6', style: "height:200px;"  %>
 
+  </div>
 
 <% end %>
 
 </div>
+
+
+ <script type="text/javascript">
+
+    var div = document.getElementById("templates");
+    ImageSelector.addImages(div);
+
+</script>
 
 
