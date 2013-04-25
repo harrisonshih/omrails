@@ -23,3 +23,19 @@ jQuery ->
   populate_box = (e) ->
     $("#pin_image_remote_url").val($(e.target)[0].src)
   $("#image_name2").on "click", populate_box
+
+jQuery ->
+  populate_box = (e) ->
+    $("#pin_image_remote_url").val($(e.target)[0].src)
+  $("#image_name3").on "click", populate_box
+
+jQuery ->
+  populate_box = (e) ->
+    $("#pin_image_remote_url").val($(e.target)[0].src)
+  $("#image_name4").on "click", populate_box
+
+
+jQuery ->
+  populate_box = (e) ->
+    $("#pin_image_remote_url").val($(e.target)[0].src)
+  $("#image_name5").on "click", populate_box
