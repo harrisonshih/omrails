@@ -34,8 +34,13 @@
   <div id = "templates">
   <h2> Recent Templates </h2>
   <p>
-  <%= Pin.last(5) %>
-  <%= image_tag Pin.last.image, id: 'image_tag6', style: "height:200px;" %>
+  <% recent = Pin.last(5) %>
+  
+  <% recent.each do |recent_image| %>
+  <%= image_tag Pin.find(recent_image.id).image, style: "height:200px;" %>
+  <% end %>
+
+  
   </p>
   <h2> Suggested Templates </h2>
   <p>
