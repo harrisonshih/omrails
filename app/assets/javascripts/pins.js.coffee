@@ -9,6 +9,14 @@ jQuery ->
         $('#pins').masonry itemSelector: ".box"
 
 
+###
+
+jQuery ->
+  populate_box = (e) ->
+    $("#pin_image_remote_url").val($(e.target)[0].src)
+  $("#image_name0").on "click", populate_box
+
+
 jQuery ->
   populate_box = (e) ->
     $("#pin_image_remote_url").val($(e.target)[0].src)
@@ -40,5 +48,5 @@ jQuery ->
   $("#image_name6").on "click", populate_box
 
 
-
+###
 

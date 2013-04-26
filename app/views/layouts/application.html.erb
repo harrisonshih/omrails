@@ -36,7 +36,12 @@
                    selImg.className = "normal";
                 }
                 this.className = "highlighted";
+       
+                var text = document.getElementById("pin_image_remote_url");
+
                 selImg = this;
+                text.value = selImg.src;
+
              };
           }
        }
