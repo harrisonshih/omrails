@@ -30,7 +30,7 @@
 
   <h2 style = "border-bottom: 1px solid #666;"> Recent Templates </h2>
     <p>
-      <% recent = Pin.last(10) %>
+      <% recent = Pin.last(10).reverse %>
       <% recent.each do |recent_image| %>
         <%= image_tag Pin.find(recent_image.id).image, style: "height:90px;" %>
       <% end %>
