@@ -24,6 +24,7 @@
 		<p>
 		<strong> Score: </strong> <%= pin.likes.size-pin.dislikes.size %>
  		</p>
+ 		
 	<p>
 	<% if current_user == pin.user %>
 		<%= link_to 'Edit', edit_pin_path(pin) %>
