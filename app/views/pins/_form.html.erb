@@ -32,9 +32,9 @@
 
   <h2 style = "border-bottom: 1px solid #666;"> Recent Templates </h2>
     <p>
-      <% recent = Pin.last(5) %>
+      <% recent = Pin.last(10) %>
       <% recent.each do |recent_image| %>
-        <%= image_tag Pin.find(recent_image.id).image, style: "height:200px;" %>
+        <%= image_tag Pin.find(recent_image.id).image, style: "height:90px;" %>
       <% end %>
     </p>
 
@@ -85,9 +85,42 @@
           <p><img src="http://i.imgflip.com/1bip.jpg" alt="Bad Luck Brian" /></p>
         </li>
         <li>
-          <p class="desc">The Most Interesting Man In The World</p>
-          <p><img src="http://i.imgflip.com/1bh8.jpg" alt="The Most Interesting Man In The World" /></p>
+          <p class="desc">Ancient Aliensd</p>
+          <p><img src="http://i.imgflip.com/26am.jpg" alt="Ancient Aliens" /></p>
         </li>
+        <li>
+          <p class="desc">Brace Yourselves X is Coming</p>
+          <p><img src="http://i.imgflip.com/1bhm.jpg" alt="Brace yourself" /></p>
+        </li>
+        <li>
+          <p class="desc">Third World Skeptical Kid</p>
+          <p><img src="http://i.imgflip.com/265k.jpg" alt="Third World Skeptical Kid" /></p>
+        </li>
+        <li>
+          <p class="desc">Too Damn High</p>
+          <p><img src="http://i.imgflip.com/1bik.jpg" alt="Too Damn High" /></p>
+        </li>
+        <li>
+          <p class="desc">Third World Success Kid</p>
+          <p><img src="http://i.imgflip.com/265j.jpg" alt="Third World Success Kid" /></p>
+        </li>
+        <li>
+          <p class="desc">Scumbag Steve</p>
+          <p><img src="http://i.imgflip.com/1bgy.jpg" alt="Scumbag Steve" /></p>
+        </li>
+        <li>
+          <p class="desc">Skeptical Baby</p>
+          <p><img src="http://i.imgflip.com/26hb.jpg" alt="Skeptical Baby" /></p>
+        </li>
+        <li>
+          <p class="desc">Confession Bear</p>
+          <p><img src="http://i.imgflip.com/25wb.jpg" /></p>
+        </li>
+        <li>
+          <p class="desc">Say That Again I Dare You</p>
+          <p><img src="http://i.imgflip.com/2nuc.jpg" /></p>
+        </li>
+
   </div>
 
 </div>
