@@ -33,10 +33,15 @@
             </p>
 
             <div>
-                <li>Liked by <%= @pin.likes.size %></li>
-                <li>Hated by <%= @pin.dislikes.size %></li>
-                <li><%= link_to "Like", like_pin_path(@pin) %></li>
-                <li><%= link_to "Hate", dislike_pin_path(@pin) %></li>
+                <strong> Score: </strong> <%= @pin.likes.size-@pin.dislikes.size %>
+                <strong> Upvotes: </strong> <%= @pin.likes.size %>
+                <strong> Downvotes: </strong> <%= @pin.dislikes.size %>
+                <p>
+                    <%= link_to image_tag("http://i228.photobucket.com/albums/ee114/aurorasing/smiley.gif", style: "height:50px;"), like_pin_path(@pin) %>
+
+                    <%= link_to image_tag("http://www.clker.com/cliparts/o/h/T/4/N/E/thumbs-down-smiley-hi.png", style: "height:50px;"), like_pin_path(@pin) %>
+
+                </p>
             </div>
 
 
