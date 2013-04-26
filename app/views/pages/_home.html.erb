@@ -1,9 +1,9 @@
 <% if user_signed_in? %>
 
-<h1> You are signed into Memegen for GREE! </h1>
+<h1> Welcome to GREE Meme Gen, <%= current_user.name %> </h1>
 
 <p>
-	<%= link_to "Meme Test", overlay_path %>
+Enjoy some memes, vote on your favorites, write some comments and create your own!
 	
 </p>
 
@@ -16,22 +16,21 @@
 	<h1>GREE Meme Gen</h1>
 
 	<p>
-		Oh My God, Have you heard of this amazing app??? It's simply amazing!!! 
+		Oh My God, Have you heard of this amazing app??? It's  amazing!!! 
 	<p>
 		Sign up right now... RIGHT NOW! You can create all kinds of memes for GREE!
 	</p>
 
-		<img src = "http://bbsimg.ngfiles.com/1/18781000/ngbbs49c18a156cd21.jpg" height="400" width="400" />
-
+	<p>
+		<img src = "http://i.imgur.com/yyEaMW0.jpg" /> 
 	</p>
 	<p>
-		Billy mayes approved!
+		Ram says do it!
 	</p>
-
-
 	<p>
 		<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
 	</p>
+
 </div>
 
 
