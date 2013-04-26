@@ -10,9 +10,10 @@
 
   <%= f.input :image, label: "Upload an image" %>
   <%= f.input :image_remote_url, label: "Or enter image URL" %>
-  <%= f.input :description, as: :text, input_html: { rows: "3" } %>
+
   <%= f.input :top_text, as: :text, input_html: { rows: "2" } %>
   <%= f.input :bottom_text, as: :text, input_html: { rows: "2" } %>
+  <%= f.input :description, as: :text, input_html: { rows: "2" } %>
 
   <div class="form-actions">
     <p> <%= f.button :submit, "Submit Meme!", class: "btn btn-primary" %> </p>
