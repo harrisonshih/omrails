@@ -29,7 +29,7 @@
               <%= @pin.description %>
             </p>
             <p>
-              <%= @pin.user.name %>
+                Posted by <%= link_to @pin.user.name, @pin.user %>
             </p>
 
             <div>

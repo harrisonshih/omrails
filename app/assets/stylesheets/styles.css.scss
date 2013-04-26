@@ -66,8 +66,43 @@ body {
     margin: 10px 0 5px;
 }
 
-.fb-comments {
-    margin: 5px;
-    padding: 5px;
-    line-height: 1.4em;
+.user_name {
+    color: red;
+    font-weight: bold;
+}
+
+#gallery {
+    position: relative;
+    padding: 1em 0;
+    }
+
+#gallery h2 {
+    margin: 0;
+    border-bottom: 1px solid #666;
+}
+
+
+#gallery #main {
+    width: 100%;
+    margin: 0;
+    padding: 1em 0;
+    list-style: none;
+    padding-left: 10px;
+}
+
+
+#gallery #main li {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+#gallery #main li img {
+    display: block;
+    height: 250px;
+    margin: 0 0 0 0;
+}
+
+#gallery #main li p.desc {
+    font-weight: bold;
+    font-size: 14px;
 }

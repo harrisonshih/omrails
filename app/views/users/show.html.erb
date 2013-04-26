@@ -1,0 +1,8 @@
+<h1><%= @user.name %></h1>
+<p> You are viewing all pins from <strong> <%= @user.name %> </strong> </p>
+
+<div id="pins">
+  <%= render @pins %>
+</div>
+
+<%= will_paginate @pins %>

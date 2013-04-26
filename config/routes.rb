@@ -1,4 +1,6 @@
 Omrails::Application.routes.draw do
+  get "user/show"
+
   resources :pins do
     member do
       get "like" => "pins#like"
@@ -8,6 +10,7 @@ Omrails::Application.routes.draw do
 
 
   devise_for :users
+  match 'users/:id' => 'users#show', as: :user
 
   get 'about' => 'Pages#about'
 

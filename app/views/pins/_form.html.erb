@@ -17,52 +17,82 @@
   <%= link_to "Edit Image", overlay_path %>
 
   <div class="form-actions">
-    <p> <%= f.button :submit, class: "btn btn-primary" %> </p>
+    <p> <%= f.button :submit, "Submit Meme!", class: "btn btn-primary" %> </p>
     <p>     <%= link_to 'Back', pins_path %>        </p>
 
   </div>
-<h2>
-  Templates for you!
-</h2>
+</div> 
+
+
 <p>
-  click an image to use it as your template! Or upload your own image file
+  Click an image to use it as your template! Or upload your own image file
 </p>
 
+<div id = "templates">
+
+  <h2 style = "border-bottom: 1px solid #666;"> Recent Templates </h2>
+    <p>
+      <% recent = Pin.last(5) %>
+      <% recent.each do |recent_image| %>
+        <%= image_tag Pin.find(recent_image.id).image, style: "height:200px;" %>
+      <% end %>
+    </p>
 
 
+  <div id = "gallery">
+    <h2> Recommended Templates </h2>
+      <ul id = "main">
+        <li>
+          <p class="desc">Anil and Kid</p>        
+          <p><img src="http://i.imgur.com/exAEWZq.png" alt="Anil and Kid" /></p>
+        </li>
+        <li>
+          <p class="desc">20% Innovation - Ken</p>
+          <p><img src="http://imgur.com/hbYgbsW.png" alt="Ken Headshot" /></p>
+        </li>
+        <li>
+          <p class="desc">Andy Lean Back</p>
+          <p><img src="http://s3.amazonaws.com/pins_app/pins/images/000/000/041/original/1366950704416.jpg?1366950747" alt="Andy Lean Back" /></p>
+        </li>
+        <li>
+          <p class="desc">Wise Ram</p>
+          <p><img src="http://s3.amazonaws.com/pins_app/pins/images/000/000/039/original/1366948686442.jpg?1366948780" alt="Ram and Wine" /></p>
 
-  <div id = "templates">
-  <h2> Recent Templates </h2>
-  <p>
-  <% recent = Pin.last(5) %>
-  
-  <% recent.each do |recent_image| %>
-  <%= image_tag Pin.find(recent_image.id).image, style: "height:200px;" %>
-  <% end %>
+        </li>
+        <li>
+          <p class="desc">Fueling Data Science</p>
+          <p><img src="http://s3.amazonaws.com/pins_app/pins/images/000/000/038/original/1366944924708.jpg?1366945000" alt="Jack Drinking" /></p>
+        </li>
 
-  
-  </p>
-  <h2> Suggested Templates </h2>
-  <p>
-
-    <%= image_tag "http://i.imgur.com/exAEWZq.png", id: 'image_name0', style: "height:200px;"   %>
-
-    <%= image_tag "http://imgur.com/hbYgbsW.png", id: 'image_name1', style: "height:200px;"  %>
-
-    <%= image_tag "http://power.itp.ac.cn/~jmyang/funny/fun4.jpg", id: 'image_name2', style: "height:200px;"  %>
-    
-    <%= image_tag "http://s3.amazonaws.com/pins_app/pins/images/000/000/021/original/Time_Trial_Close_Up.jpg?1366868228", id: 'image_name3', style: "height:200px;"  %>
-    
-    <%= image_tag "http://i.imgflip.com/1bip.jpg", id: 'image_name4', style: "height:200px;"  %>
-    
-    <%= image_tag "http://i.imgflip.com/1bh8.jpg", id: 'image_name5', style: "height:200px;"  %>
-  </p>
-
+        <li>
+          <p class="desc">Grumpy Cat</p>        
+          <p><img src="http://i.imgflip.com/8p0a.jpg" alt="Grumpy Cat" /></p>
+        </li>
+        <li>
+          <p class="desc">One Does Not Simply</p>
+          <p><img src="http://i.imgflip.com/1bij.jpg" alt="One Does Not Simply" /></p>
+        </li>
+        <li>
+          <p class="desc">Y U No</p>
+          <p><img src="http://i.imgflip.com/1bh3.jpg" alt="Y U No" /></p>
+        </li>
+        <li>
+          <p class="desc">Futurama Fry</p>
+          <p><img src="http://i.imgflip.com/1bgw.jpg" alt="Futurama Fry" /></p>
+        </li>
+        <li>
+          <p class="desc">Bad Luck Brian</p>
+          <p><img src="http://i.imgflip.com/1bip.jpg" alt="Bad Luck Brian" /></p>
+        </li>
+        <li>
+          <p class="desc">The Most Interesting Man In The World</p>
+          <p><img src="http://i.imgflip.com/1bh8.jpg" alt="The Most Interesting Man In The World" /></p>
+        </li>
   </div>
 
-<% end %>
-
 </div>
+
+<% end %>
 
 
  <script type="text/javascript">
